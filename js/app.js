@@ -4346,6 +4346,32 @@
         initSliders();
     }));
     let addWindowScrollEvent = false;
+    function headerScroll() {
+        addWindowScrollEvent = true;
+        const header = document.querySelector("header.header");
+        const headerShow = header.hasAttribute("data-scroll-show");
+        const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
+        const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
+        let scrollDirection = 0;
+        let timer;
+        document.addEventListener("windowScroll", (function(e) {
+            const scrollTop = window.scrollY;
+            clearTimeout(timer);
+            if (scrollTop >= startPoint) {
+                !header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
+                if (headerShow) {
+                    if (scrollTop > scrollDirection) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null; else !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                    timer = setTimeout((() => {
+                        !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                    }), headerShowTimer);
+                }
+            } else {
+                header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
+                if (headerShow) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+            }
+            scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
+        }));
+    }
     setTimeout((() => {
         if (addWindowScrollEvent) {
             let windowScroll = new Event("windowScroll");
@@ -4438,6 +4464,28 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
+    if (document.querySelector(".maps")) {
+        ymaps.ready(init);
+        function init() {
+            let myMap = new ymaps.Map("maps", {
+                controls: [],
+                center: [ 55.76178676472323, 37.62267936531007 ],
+                zoom: 10
+            });
+            let myPlacemark = new ymaps.Placemark([ 50.420932, 30.520792 ], {}, {
+                hasBalloon: false,
+                hideIconOnBalloonOpen: false,
+                iconLayout: "default#imageWithContent",
+                iconImageHref: "img/icons/map.svg",
+                iconImageSize: [ 40, 40 ],
+                iconImageOffset: [ -20, -20 ],
+                iconContentOffset: [ 0, 0 ]
+            });
+            myMap.geoObjects.add(myPlacemark);
+            myMap.behaviors.disable("scrollZoom");
+            myMap.behaviors.disable("drag");
+        }
+    }
     document.addEventListener("click", documentActions);
     function documentActions(e) {
         const targetElement = e.target;
@@ -4461,4 +4509,5 @@
         autoHeight: false
     });
     formSubmit();
+    headerScroll();
 })();
