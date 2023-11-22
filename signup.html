@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Покупателям</title>
+	<title>Регистрация</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -25,7 +25,7 @@
 								<li class="menu__item"><a class="menu__link undefined" href="#">женское</a></li>
 								<li class="menu__item"><a class="menu__link undefined" href="#">мужское</a></li>
 								<li class="menu__item"><a class="menu__link undefined" href="#">аутлет</a></li>
-								<li class="menu__item"><a class="menu__link _active" href="#">покупателям</a></li>
+								<li class="menu__item"><a class="menu__link undefined" href="#">покупателям</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -35,7 +35,7 @@
 					<div class="header__actions actions-header">
 						<div data-da=".menu__body, 497.98, 1" class="actions-header__body">
 							<button class="actions-header__icon actions-header__icon_search _icon-search" type="button"></button>
-							<a class="actions-header__icon _icon-user undefined" href="#"></a>
+							<a class="actions-header__icon _icon-user _active" href="#"></a>
 							<a class="actions-header__icon _icon-favorite" href="#"></a>
 							<a class="actions-header__icon _icon-cart" href="#"></a>
 						</div>
@@ -53,7 +53,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="page__buyers buyers">
+			<div class="page__signup signup">
 				<div class="breadcrumbs breadcrumbs_product">
 					<div class="breadcrumbs__container">
 						<ul class="breadcrumbs__list">
@@ -61,64 +61,38 @@
 								<a class="breadcrumbs__link breadcrumbs__link_buyers" href="https://google.com" target="_blank">Главная</a>
 							</li>
 							<li class="breadcrumbs__item">
-								<a class="breadcrumbs__link breadcrumbs__link_buyers _active" href="#">Покупателям</a>
+								<a class="breadcrumbs__link breadcrumbs__link_buyers _active" href="#">Регистрация</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<section class="buyers__content content-buyers">
-					<div class="content-buyers__container">
-						<h1 class="content-buyers__title _title-products">Покупателям</h1>
-						<div class="content-buyers__body">
-							<div class="content-buyers__items items-buyers">
-								<a class="items-buyers__item items-buyers__item_top" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/about.svg" alt="О нас">
+				<section class="signup__content content-signup">
+					<div class="content-signup__container">
+						<div class="content-signup__title _title-products">Регистрация</div>
+						<div class="content-signup__body">
+							<div class="content-signup__signup signup-cabinet">
+								<div class="signup-cabinet__body">
+									<div class="signup-cabinet__items">
+										<div class="signup-cabinet__description">
+											<p>
+												Вы сможете быстрее оформлять и отслеживать свои заказы,
+												а списки избранных товаров
+												будут синхронизироваться на всех устройствах, с которых вы заходите в магазин. Введите
+												свой адрес электронной почты и мы отправим вам ссылку для мгновенного входа в
+												аккаунт.
+											</p>
+											<p>Мы автоматически создадим для вас аккаунт, если у вас его ещё нет.</p>
+										</div>
+										<form action="#" class="signup-cabinet__form">
+											<input autocomplete="off" type="text" name="form[]" data-required="email" data-error="Введите кореректный E-mail" placeholder="ваш e-mail" class="signup-cabinet__input">
+											<button type="submit" class="signup-cabinet__button">Получить ссылку для входа</button>
+										</form>
+										<div class="form-mailing__text">
+											Нажимая на кнопку, вы даете согласие на
+											<a class="form-mailing__personal" href="#">обработку своих персональных данных</a>
+										</div>
 									</div>
-									<span class="items-buyers__label">О нас</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_top" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/delivery.svg" alt="Оплата и доставка">
-									</div>
-									<span class="items-buyers__label">Оплата и доставка</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_top" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/polytic.svg" alt="Политика конфиденциальности">
-									</div>
-									<span class="items-buyers__label">Политика конфиденциальности </span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_top" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/loyality.svg" alt="Программа лояльности">
-									</div>
-									<span class="items-buyers__label">Программа лояльности</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_bottom" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/contacts.svg" alt="Контакты">
-									</div>
-									<span class="items-buyers__label">Контакты</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_bottom" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/return.svg" alt="Обмен и возврат">
-									</div>
-									<span class="items-buyers__label">Обмен и возврат</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_bottom" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/offer.svg" alt="Оферта">
-									</div>
-									<span class="items-buyers__label">Оферта</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_bottom" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/sertificate.svg" alt="Подарочные сертификаты">
-									</div>
-									<span class="items-buyers__label">Подарочные сертификаты</span>
-								</a>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Покупателям</title>
+	<title>Личный кабинет</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -25,7 +25,7 @@
 								<li class="menu__item"><a class="menu__link undefined" href="#">женское</a></li>
 								<li class="menu__item"><a class="menu__link undefined" href="#">мужское</a></li>
 								<li class="menu__item"><a class="menu__link undefined" href="#">аутлет</a></li>
-								<li class="menu__item"><a class="menu__link _active" href="#">покупателям</a></li>
+								<li class="menu__item"><a class="menu__link undefined" href="#">покупателям</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -35,7 +35,7 @@
 					<div class="header__actions actions-header">
 						<div data-da=".menu__body, 497.98, 1" class="actions-header__body">
 							<button class="actions-header__icon actions-header__icon_search _icon-search" type="button"></button>
-							<a class="actions-header__icon _icon-user undefined" href="#"></a>
+							<a class="actions-header__icon _icon-user _active" href="#"></a>
 							<a class="actions-header__icon _icon-favorite" href="#"></a>
 							<a class="actions-header__icon _icon-cart" href="#"></a>
 						</div>
@@ -53,7 +53,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="page__buyers buyers">
+			<div class="page__cabinet cabinet">
 				<div class="breadcrumbs breadcrumbs_product">
 					<div class="breadcrumbs__container">
 						<ul class="breadcrumbs__list">
@@ -61,65 +61,42 @@
 								<a class="breadcrumbs__link breadcrumbs__link_buyers" href="https://google.com" target="_blank">Главная</a>
 							</li>
 							<li class="breadcrumbs__item">
-								<a class="breadcrumbs__link breadcrumbs__link_buyers _active" href="#">Покупателям</a>
+								<a class="breadcrumbs__link breadcrumbs__link_buyers _active" href="#">Личный кабинет</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<section class="buyers__content content-buyers">
-					<div class="content-buyers__container">
-						<h1 class="content-buyers__title _title-products">Покупателям</h1>
-						<div class="content-buyers__body">
-							<div class="content-buyers__items items-buyers">
-								<a class="items-buyers__item items-buyers__item_top" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/about.svg" alt="О нас">
+				<section class="cabinet__content">
+					<div class="cabinet__container">
+						<h1 class="cabinet__title _title-products">Личный кабинет</h1>
+						<div class="cabinet__home home-cabinet">
+							<div class="home-cabinet__body">
+								<a class="home-cabinet__category home-cabinet__category_left" href="#">
+									<div class="home-cabinet__item">
+										<div class="home-cabinet__icon">
+											<img src="img/cabinet/account.svg" alt="Учетная запись">
+										</div>
+										<span class="home-cabinet__label">Учетная запись</span>
 									</div>
-									<span class="items-buyers__label">О нас</span>
 								</a>
-								<a class="items-buyers__item items-buyers__item_top" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/delivery.svg" alt="Оплата и доставка">
+								<a class="home-cabinet__category home-cabinet__category_center" href="#">
+									<div class="home-cabinet__item">
+										<div class="home-cabinet__icon">
+											<img src="img/cabinet/password.svg" alt="Смена пароля">
+										</div>
+										<span class="home-cabinet__label">Смена пароля</span>
 									</div>
-									<span class="items-buyers__label">Оплата и доставка</span>
 								</a>
-								<a class="items-buyers__item items-buyers__item_top" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/polytic.svg" alt="Политика конфиденциальности">
+								<a class="home-cabinet__category home-cabinet__category_right" href="#">
+									<div class="home-cabinet__item">
+										<div class="home-cabinet__icon">
+											<img src="img/cabinet/orders.svg" alt="Мои заказы">
+										</div>
+										<span class="home-cabinet__label">Мои заказы</span>
 									</div>
-									<span class="items-buyers__label">Политика конфиденциальности </span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_top" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/loyality.svg" alt="Программа лояльности">
-									</div>
-									<span class="items-buyers__label">Программа лояльности</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_bottom" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/contacts.svg" alt="Контакты">
-									</div>
-									<span class="items-buyers__label">Контакты</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_bottom" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/return.svg" alt="Обмен и возврат">
-									</div>
-									<span class="items-buyers__label">Обмен и возврат</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_bottom" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/offer.svg" alt="Оферта">
-									</div>
-									<span class="items-buyers__label">Оферта</span>
-								</a>
-								<a class="items-buyers__item items-buyers__item_bottom" href="#">
-									<div class="items-buyers__icon">
-										<img src="img/buyers/categories/sertificate.svg" alt="Подарочные сертификаты">
-									</div>
-									<span class="items-buyers__label">Подарочные сертификаты</span>
 								</a>
 							</div>
+							<button type="button" class="home-cabinet__exit">Выйти</button>
 						</div>
 					</div>
 				</section>
