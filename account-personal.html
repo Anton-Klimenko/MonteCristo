@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Смена пароля</title>
+	<title>Личные данные</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -70,35 +70,66 @@
 					<div class="account__container">
 						<h1 class="account__title _title-products">Учетная запись</h1>
 						<div class="account__navigation navigation-account">
-							<a class="navigation-account__link" href="#">Личные данные</a>
-							<a class="navigation-account__link _active" href="#">Смена пароля</a>
+							<a class="navigation-account__link _active" href="#">Личные данные</a>
+							<a class="navigation-account__link" href="#">Смена пароля</a>
 							<a class="navigation-account__link" href="#">Мои заказы</a>
 							<button class="navigation-account__link" type="button">Выйти</button>
 						</div>
 						<div class="account__body">
-							<div class="account__change-password change-password">
-								<div class="change-password__body">
-									<form action="#" class="change-password__form">
-										<div class="change-password__items">
-											<div class="change-password__item">
-												<div class="change-password__label">Текущий пароль</div>
-												<input autocomplete="off" type="password" name="form[]" data-error="Ошибка" class="change-password__input">
+							<div class="account__personal personal-account">
+								<div class="personal-account__body">
+									<div class="personal-account__info info-personal">
+										<div class="info-personal__body">
+											<div class="info-personal__item">
+												<div class="info-personal__label">Эл. адрес</div>
+												<div class="info-personal__value">qwerty@mail.com</div>
 											</div>
-											<div class="change-password__item">
-												<div class="change-password__label">Новый пароль</div>
-												<input autocomplete="off" type="password" name="form[]" data-error="Ошибка" class="change-password__input">
+											<div class="info-personal__item">
+												<div class="info-personal__label">Номер телефона</div>
+												<div class="info-personal__value">+7 (000) 000-00-00</div>
+											</div>
+											<div class="info-personal__item">
+												<div class="info-personal__label">Фамилия</div>
+												<div class="info-personal__value">Иванов</div>
+											</div>
+											<div class="info-personal__item">
+												<div class="info-personal__label">Имя</div>
+												<div class="info-personal__value">Иван</div>
+											</div>
+											<div class="info-personal__item">
+												<div class="info-personal__label">Отчество</div>
+												<div class="info-personal__value">Иванович</div>
+											</div>
+											<div class="info-personal__item">
+												<div class="info-personal__label">Дата рождения</div>
+												<div class="info-personal__value">0 1 . 0 1 . 2 0 0 1</div>
 											</div>
 										</div>
-										<div class="change-password__items">
-											<div class="change-password__item">
-												<div class="change-password__label">Эл. адрес</div>
-												<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" value="qwerty@mail.com" class="change-password__input">
+									</div>
+									<div class="personal-account__benefit benefit-personal">
+										<div class="benefit-personal__body">
+											<div class="benefit-personal__number">№ 0000 0000 00 000</div>
+											<div class="benefit-personal__items">
+												<div class="benefit-personal__values">
+													<div class="benefit-personal__value _active">0</div>
+													<div class="benefit-personal__value _active">300 000</div>
+													<div class="benefit-personal__value">500 000</div>
+													<div class="benefit-personal__value">1 000 000</div>
+												</div>
+												<div class="benefit-personal__progress">
+													<div class="benefit-personal__line" style="width: 39.6%"></div>
+												</div>
 											</div>
-											<div class="change-password__item">
-												<button type="submit" class="change-password__button">Изменить пароль</button>
+											<div class="benefit-personal__item">
+												<div class="benefit-personal__label">Накоплено бонусов</div>
+												<div class="benefit-personal__item-value">0</div>
+											</div>
+											<div class="benefit-personal__item">
+												<div class="benefit-personal__label">Личная скидка</div>
+												<div class="benefit-personal__item-value">0 %</div>
 											</div>
 										</div>
-									</form>
+									</div>
 								</div>
 							</div>
 						</div>

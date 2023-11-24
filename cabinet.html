@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231123000336">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231124215938">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,8 +36,8 @@
 						<div data-da=".menu__body, 497.98, 1" class="actions-header__body">
 							<button class="actions-header__icon actions-header__icon_search _icon-search" type="button"></button>
 							<a class="actions-header__icon _icon-user _active" href="#"></a>
-							<a class="actions-header__icon _icon-favorite" href="#"></a>
-							<a class="actions-header__icon _icon-cart" href="#"></a>
+							<a class="actions-header__icon _icon-favorite undefined" href="#"></a>
+							<a class="actions-header__icon _icon-cart undefined" href="#"></a>
 						</div>
 						<div class="actions-header__search">
 							<form action="#" class="actions-header__form form-search">
@@ -58,10 +58,10 @@
 					<div class="breadcrumbs__container">
 						<ul class="breadcrumbs__list">
 							<li class="breadcrumbs__item">
-								<a class="breadcrumbs__link breadcrumbs__link_buyers" href="https://google.com" target="_blank">Главная</a>
+								<a class="breadcrumbs__link" href="#">Главная</a>
 							</li>
 							<li class="breadcrumbs__item">
-								<a class="breadcrumbs__link breadcrumbs__link_buyers _active" href="#">Личный кабинет</a>
+								<a class="breadcrumbs__link _active" href="#">Личный кабинет</a>
 							</li>
 						</ul>
 					</div>
@@ -302,79 +302,89 @@
 		<footer class="footer">
 			<div class="footer__container">
 				<div data-spollers="490, max" class="footer__body">
-					<details class="footer__column">
-						<summary type="button" data-spoller class="footer__title">Контакты</summary>
-						<ul class="footer__list">
-							<li class="footer__item">
-								<a class="footer__link footer__link_big" href="tel:80000000000">8 (000) 000-00-00</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link footer__link_big" href="mailto:MC@mail.ru">MC@mail.ru</a>
-							</li>
-						</ul>
-					</details>
-					<details class="footer__column">
-						<summary data-spoller class="footer__title">Адрес магазина</summary>
-						<ul class="footer__list">
-							<li class="footer__item">
-								<a class="footer__link footer__link_big">ул. Охотный ряд 2,Москва </a>
-							</li>
-						</ul>
-					</details>
-					<details class="footer__column">
-						<summary data-spoller type="button" class="footer__title">Меню</summary>
-						<ul class="footer__list">
-							<li class="footer__item">
-								<a class="footer__link" href="#">Женское</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Мужское</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Аутлет</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Покупателям</a>
-							</li>
-						</ul>
-					</details>
-					<details class="footer__column">
-						<summary data-spoller type="button" class="footer__title">Информация</summary>
-						<ul class="footer__list">
-							<li class="footer__item">
-								<a class="footer__link" href="#">О нас</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Наши магазины</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Подарочные сертификаты</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Программа лояльности</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Согласие на обработку персональных данных</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Политика конфиденциальности</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Оферта</a>
-							</li>
-						</ul>
-					</details>
-					<details class="footer__column">
-						<summary data-spoller type="button" class="footer__title">Помощь</summary>
-						<ul class="footer__list">
-							<li class="footer__item">
-								<a class="footer__link" href="#">Оплата и доставка</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#">Обмен и возврат</a>
-							</li>
-						</ul>
-					</details>
+					<div class="footer__column">
+						<button type="button" data-spoller class="footer__title">Контакты</button>
+						<div class="footer__box">
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a class="footer__link footer__link_big" href="tel:80000000000">8 (000) 000-00-00</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link footer__link_big" href="mailto:MC@mail.ru">MC@mail.ru</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__column">
+						<button data-spoller type="button" class="footer__title">Адрес магазина</button>
+						<div class="footer__box">
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a class="footer__link footer__link_big">ул. Охотный ряд 2,Москва </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__column">
+						<button data-spoller type="button" class="footer__title">Меню</button>
+						<div class="footer__box">
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a class="footer__link" href="#">Женское</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Мужское</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Аутлет</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Покупателям</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__column">
+						<button data-spoller type="button" class="footer__title">Информация</button>
+						<div class="footer__box">
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a class="footer__link" href="#">О нас</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Наши магазины</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Подарочные сертификаты</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Программа лояльности</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Согласие на обработку персональных данных</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Политика конфиденциальности</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Оферта</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__column">
+						<button data-spoller type="button" class="footer__title">Помощь</button>
+						<div class="footer__box">
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a class="footer__link" href="#">Оплата и доставка</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Обмен и возврат</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<a class="footer__logo" href="#">
 					<img src="img/logo.svg" alt="Логотип">
@@ -382,8 +392,8 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://api-maps.yandex.ru/2.1.77/?apikey=<API-ключ&_v=20231123000336>&lang=ru_RU"></script>
-	<script src="js/app.min.js?_v=20231123000336"></script>
+	<script src="https://api-maps.yandex.ru/2.1.77/?apikey=<API-ключ&_v=20231124215938>&lang=ru_RU"></script>
+	<script src="js/app.min.js?_v=20231124215938"></script>
 </body>
 
 </html>

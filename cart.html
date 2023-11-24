@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Смена пароля</title>
+	<title>Личные данные</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -35,9 +35,9 @@
 					<div class="header__actions actions-header">
 						<div data-da=".menu__body, 497.98, 1" class="actions-header__body">
 							<button class="actions-header__icon actions-header__icon_search _icon-search" type="button"></button>
-							<a class="actions-header__icon _icon-user _active" href="#"></a>
+							<a class="actions-header__icon _icon-user undefined" href="#"></a>
 							<a class="actions-header__icon _icon-favorite undefined" href="#"></a>
-							<a class="actions-header__icon _icon-cart undefined" href="#"></a>
+							<a class="actions-header__icon _icon-cart _active" href="#"></a>
 						</div>
 						<div class="actions-header__search">
 							<form action="#" class="actions-header__form form-search">
@@ -53,7 +53,7 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="page__account account">
+			<div class="page__cart cart">
 				<div class="breadcrumbs breadcrumbs_product">
 					<div class="breadcrumbs__container">
 						<ul class="breadcrumbs__list">
@@ -61,47 +61,180 @@
 								<a class="breadcrumbs__link" href="#">Главная</a>
 							</li>
 							<li class="breadcrumbs__item">
-								<a class="breadcrumbs__link _active" href="#">Учетная запись</a>
+								<a class="breadcrumbs__link _active" href="#">Корзина</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<section class="account__content">
-					<div class="account__container">
-						<h1 class="account__title _title-products">Учетная запись</h1>
-						<div class="account__navigation navigation-account">
-							<a class="navigation-account__link" href="#">Личные данные</a>
-							<a class="navigation-account__link _active" href="#">Смена пароля</a>
-							<a class="navigation-account__link" href="#">Мои заказы</a>
-							<button class="navigation-account__link" type="button">Выйти</button>
-						</div>
-						<div class="account__body">
-							<div class="account__change-password change-password">
-								<div class="change-password__body">
-									<form action="#" class="change-password__form">
-										<div class="change-password__items">
-											<div class="change-password__item">
-												<div class="change-password__label">Текущий пароль</div>
-												<input autocomplete="off" type="password" name="form[]" data-error="Ошибка" class="change-password__input">
-											</div>
-											<div class="change-password__item">
-												<div class="change-password__label">Новый пароль</div>
-												<input autocomplete="off" type="password" name="form[]" data-error="Ошибка" class="change-password__input">
+				<section class="cart__content content-cart">
+					<div class="content-cart__container">
+						<h1 class="content-cart__title _title-products">Корзина</h1>
+						<form class="content-cart__body" action="#">
+							<div class="content-cart__info info-cart">
+								<div class="info-cart__items">
+									<h2 class="info-cart__title">Личная информация</h2>
+									<div class="info-cart__body">
+										<div class="info-cart__item info-cart__item_big">
+											<input autocomplete="off" type="text" name="form[]" data-required="email" data-error="Ошибка" placeholder="Эл. адрес" class="info-cart__input">
+										</div>
+										<div class="info-cart__item">
+											<input autocomplete="off" type="text" name="form[]" data-required data-error="Ошибка" placeholder="Имя" class="info-cart__input">
+										</div>
+										<div class="info-cart__item">
+											<input autocomplete="off" type="text" name="form[]" data-required data-error="Ошибка" placeholder="Фамилия" class="info-cart__input">
+										</div>
+										<div class="info-cart__item">
+											<input autocomplete="off" type="text" name="form[]" data-required data-error="Ошибка" placeholder="Отчество" class="info-cart__input">
+										</div>
+										<div class="info-cart__item">
+											<input autocomplete="off" type="tel" name="form[]" data-required data-error="Ошибка" placeholder="Номер телефона" class="info-cart__input">
+										</div>
+									</div>
+								</div>
+								<div class="info-cart__items">
+									<h2 class="info-cart__title">Способ доставки</h2>
+									<div class="info-cart__body info-cart__body_border">
+										<div class="info-cart__column">
+											<div class="options options_cart">
+												<div class="options__item">
+													<input hidden id="o_1" class="options__input" checked type="radio" value="1" name="delivery-method">
+													<label for="o_1" class="options__label options__label_cart"><span class="options__text options__text_cart">Самовывоз</span></label>
+												</div>
+												<div class="options__item">
+													<input hidden id="o_2" class="options__input" type="radio" value="2" name="delivery-method">
+													<label for="o_2" class="options__label options__label_cart"><span class="options__text options__text_cart">Доставка курьером</span></label>
+												</div>
 											</div>
 										</div>
-										<div class="change-password__items">
-											<div class="change-password__item">
-												<div class="change-password__label">Эл. адрес</div>
-												<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" value="qwerty@mail.com" class="change-password__input">
-											</div>
-											<div class="change-password__item">
-												<button type="submit" class="change-password__button">Изменить пароль</button>
+										<div class="info-cart__column">
+											<div class="info-cart__descr">
+												<p>
+													Доставка 500 руб.
+													Бесплатная доставка при заказе от 30 000 руб.
+												</p>
+												<p>Самовывоз бесплатно</p>
 											</div>
 										</div>
-									</form>
+									</div>
+
+								</div>
+								<div class="info-cart__items">
+									<h2 class="info-cart__title">Адрес доставки</h2>
+									<div class="info-cart__body">
+										<div class="info-cart__item info-cart__item_big">
+											<input autocomplete="off" type="text" name="form[]" data-required data-error="Ошибка" placeholder="Россия" class="info-cart__input">
+										</div>
+										<div class="info-cart__item info-cart__item_big">
+											<input autocomplete="off" type="text" name="form[]" data-required data-error="Ошибка" placeholder="Город" class="info-cart__input">
+										</div>
+										<div class="info-cart__item">
+											<input autocomplete="off" type="text" name="form[]" data-required data-error="Ошибка" placeholder="Индекс" class="info-cart__input">
+										</div>
+										<div class="info-cart__item">
+											<input autocomplete="off" type="text" name="form[]" data-required data-error="Ошибка" placeholder="Улица" class="info-cart__input">
+										</div>
+										<div class="info-cart__item">
+											<input autocomplete="off" type="text" name="form[]" data-required data-error="Ошибка" placeholder="Дом" class="info-cart__input">
+										</div>
+										<div class="info-cart__item">
+											<input autocomplete="off" type="text" name="form[]" data-required data-error="Ошибка" placeholder="Квартира" class="info-cart__input">
+											<div class="checkbox checkbox_cart">
+												<input id="c_1" data-error="Ошибка" class="checkbox__input" checked type="checkbox" value="1" name="form[home]">
+												<label for="c_1" class="checkbox__label"><span class="checkbox__text checkbox__text_cart">Отсутствует</span></label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="info-cart__items">
+									<h2 class="info-cart__title">Способ оплаты</h2>
+									<div class="info-cart__body info-cart__body_border">
+										<div class="info-cart__column">
+											<div class="options options_cart">
+												<div class="options__item">
+													<input hidden id="o_4" class="options__input" checked type="radio" value="4" name="payment">
+													<label for="o_4" class="options__label options__label_cart"><span class="options__text options__text_cart">Оплата картой онлайн (Visa, MasterCard,
+															UnionPay)</span></label>
+												</div>
+												<div class="options__item">
+													<input hidden id="o_5" class="options__input" type="radio" value="5" name="payment">
+													<label for="o_5" class="options__label options__label_cart"><span class="options__text options__text_cart">Оплата наличными курьеру</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="info-cart__items">
+									<h2 class="info-cart__title">Скидки</h2>
+									<div class="info-cart__body info-cart__body_border">
+										<div class="info-cart__sale">
+											<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Промокод" class="info-cart__input info-cart__input_sale">
+											<button type="button" class="info-cart__button">Применить</button>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+							<div class="content-cart__total total-cart">
+								<div class="total-cart__body">
+									<div class="total-cart__items">
+										<div class="total-cart__image-ibg">
+											<picture><source srcset="img/product/01.webp" type="image/webp"><img src="img/product/01.jpg" alt="Сумка на плечо GG Marmont"></picture>
+										</div>
+										<div class="total-cart__item item-total-cart">
+											<div class="item-total-cart__name">GG Marmont</div>
+											<div class="item-total-cart__categoryes">
+												<div class="item-total-cart__label">Сумка на плечо</div>
+												<div class="item-total-cart__price">42 000 RUB</div>
+											</div>
+											<div data-quantity class="item-total-cart__quantity quantity">
+												<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="number" name="form[]" value="1">
+												</div>
+												<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+											</div>
+										</div>
+									</div>
+									<div class="total-cart__items">
+										<div class="total-cart__image-ibg">
+											<picture><source srcset="img/buyers/certificates/01.webp" type="image/webp"><img src="img/buyers/certificates/01.jpg" alt="На сумму 10 000"></picture>
+										</div>
+										<div class="total-cart__item item-total-cart">
+											<div class="item-total-cart__name">Подарочный сертификат</div>
+											<div class="item-total-cart__categoryes">
+												<div class="item-total-cart__label">На сумму 10 000</div>
+												<div class="item-total-cart__price">10 000 RUB</div>
+											</div>
+											<div data-quantity class="item-total-cart__quantity quantity">
+												<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="number" name="form[]" value="1">
+												</div>
+												<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="total-cart__details details-cart">
+									<div class="details-cart__top">
+										<div class="details-cart__total">
+											<div class="details-cart__label">Сумма</div>
+											<div class="details-cart__price">52 000 RUB</div>
+										</div>
+										<div class="details-cart__total">
+											<div class="details-cart__label">Скидка</div>
+											<div class="details-cart__price">5000 RUB</div>
+										</div>
+									</div>
+									<div class="details-cart__bottom">
+										<div class="details-cart__total">
+											<div class="details-cart__label details-cart__label_up">Общая сумма</div>
+											<div class="details-cart__price details-cart__price_up">47 000 rub</div>
+										</div>
+									</div>
+								</div>
+								<button type="submit" class="total-cart__button">Оформить заказ</button>
+							</div>
+						</form>
 					</div>
 				</section>
 				<div class="content__partners partners">
