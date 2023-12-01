@@ -152,6 +152,14 @@ body._search::before {
   transition: background-color 0.3s linear;
 }
 
+body ::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+body ::selection {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -1389,6 +1397,7 @@ input[type=number] {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 100%;
 }
 
 .row-main-block__items::before {
@@ -1424,8 +1433,13 @@ input[type=number] {
 }
 
 .product {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .product__image-ibg {
@@ -1433,6 +1447,9 @@ input[type=number] {
 }
 
 .product__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1444,6 +1461,13 @@ input[type=number] {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+.product__title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 100%;
 }
 
 .product__title-link {
@@ -4139,8 +4163,8 @@ input[type=number] {
     margin-bottom: 5.625rem;
   }
 
-  .product__item {
-    padding-top: 2.25rem;
+  .product {
+    row-gap: 2.25rem;
   }
 
   .product__item {
@@ -4897,8 +4921,8 @@ input[type=number] {
     margin-bottom: 2.5rem;
   }
 
-  .product__item {
-    padding-top: 0.625rem;
+  .product {
+    row-gap: 1.25rem;
   }
 
   .product__item {
@@ -5740,7 +5764,11 @@ input[type=number] {
   }
 
   .row-main-block__items {
-    padding-bottom: 52.0833333333%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 
   .contact-buyers__item {
@@ -6401,15 +6429,15 @@ input[type=number] {
     }
 }
 
-@supports (padding-top: clamp( 0.625rem , 0.1101485149rem  +  2.5742574257vw , 2.25rem )) {
-    .product__item {
-      padding-top: clamp( 0.625rem , 0.1101485149rem  +  2.5742574257vw , 2.25rem );
+@supports (row-gap: clamp( 1.25rem , 0.9331683168rem  +  1.5841584158vw , 2.25rem )) {
+    .product {
+      row-gap: clamp( 1.25rem , 0.9331683168rem  +  1.5841584158vw , 2.25rem );
     }
 }
 
-@supports not (padding-top: clamp( 0.625rem , 0.1101485149rem  +  2.5742574257vw , 2.25rem )) {
-    .product__item {
-      padding-top: calc(0.625rem + 1.625 * (100vw - 20rem) / 63.125);
+@supports not (row-gap: clamp( 1.25rem , 0.9331683168rem  +  1.5841584158vw , 2.25rem )) {
+    .product {
+      row-gap: calc(1.25rem + 1 * (100vw - 20rem) / 63.125);
     }
 }
 
